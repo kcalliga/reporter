@@ -1,0 +1,27 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: reporter
+  namespace: reporter
+  labels:
+    app: reporter
+    app.kubernetes.io/component: reporter
+    app.kubernetes.io/instance: reporter
+    app.kubernetes.io/name: reporter
+    app.kubernetes.io/part-of: reporter
+    app.openshift.io/runtime-version: 7.2-apache
+spec:
+  ipFamilies:
+    - IPv4
+  ports:
+    - name: 80-tcp
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  internalTrafficPolicy: Cluster
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app: reporter
+    deploymentconfig: reporter
