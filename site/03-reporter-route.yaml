@@ -1,0 +1,21 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: reporter
+  namespace: reporter
+  labels:
+    app: reporter
+    app.kubernetes.io/component: reporter
+    app.kubernetes.io/instance: reporter
+    app.kubernetes.io/name: reporter
+    app.kubernetes.io/part-of: reporter
+    app.openshift.io/runtime-version: 7.2-apache
+spec:
+  host: reporter.drivetester.us
+  to:
+    kind: Service
+    name: reporter
+    weight: 100
+  port:
+    targetPort: 80-tcp
+  wildcardPolicy: None
