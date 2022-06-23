@@ -17,5 +17,5 @@ spec:
     name: reporter
     weight: 100
   port:
-    targetPort: 80-tcp
+    targetPort: http-reporter
   wildcardPolicy: None
