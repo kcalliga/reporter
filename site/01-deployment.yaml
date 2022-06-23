@@ -26,6 +26,7 @@ spec:
         version: v1
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
+        sidecar.istio.io/inject: 'true'
     spec:
       restartPolicy: Always
       serviceAccountName: reporter
@@ -37,7 +38,8 @@ spec:
           image: >-
             php@sha256:25417b6c9c2e1a52b551ba89087f4d07c216f58784773c9e7a1710a1f6e2b4a1
           ports:
-            - containerPort: 80
+            - name: http-reporter
+              containerPort: 80
               protocol: TCP
           resources: {}
           volumeMounts:
