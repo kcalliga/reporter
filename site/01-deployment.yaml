@@ -16,7 +16,6 @@ spec:
   selector:
     matchLabels:
       app: reporter
-      version: v1
   template:
     metadata:
       creationTimestamp: null
