@@ -14,7 +14,7 @@ spec:
   ipFamilies:
     - IPv4
   ports:
-    - name: 80-tcp
+    - name: http-reporter
       protocol: TCP
       port: 80
       targetPort: 80
