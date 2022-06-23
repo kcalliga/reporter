@@ -10,17 +10,20 @@ metadata:
     app.kubernetes.io/name: reporter
     app.kubernetes.io/part-of: reporter
     app.openshift.io/runtime-namespace: reporter
+    version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: reporter
+      version: v1
   template:
     metadata:
       creationTimestamp: null
       labels:
         app: reporter
         deploymentconfig: reporter
+        version: v1
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
     spec:
