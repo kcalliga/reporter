@@ -16,7 +16,7 @@ spec:
   ports:
     - name: http-reporter
       protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 8080
   internalTrafficPolicy: Cluster
   type: ClusterIP
