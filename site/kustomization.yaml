@@ -9,3 +9,4 @@ resources:
   - 03-reporter-route.yaml
   - 04-pvc.yaml
   - 05-php-ini-cm.yaml
+  - 06-ports-conf-cm.yaml
